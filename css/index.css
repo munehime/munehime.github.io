@@ -61,7 +61,7 @@ body {
 	color: white;
 }
 
-.info_text p:first-child{
+.info_text p:first-child {
 	margin-top: 25px;
 }
 
@@ -86,6 +86,7 @@ li {
 }
 
 li a {
+	font-family: "Roboto", sans-serif;
 	font-size: 20px;
 	display: block;
 	padding: 12px;
@@ -98,4 +99,24 @@ li a:hover:not(.active) {
 
 li .active {
 	color: #ffffff;
+}
+
+.works {
+	
+	display: inline-block;
+}
+
+.works_content {
+	display: none;
+	position: absolute;
+	z-index: 1;
+}
+
+.works_content a {
+	text-align: left;
+	display: block;
+}
+
+.works:hover .works_content {
+	display: block;
 }
