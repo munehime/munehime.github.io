@@ -1,25 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto&display=swap");
 
-body {
-	background-color: #111111;
-	-webkit-font-smoothing: antialiased;
-	-webkit-tap-highlight-color: white;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-.header {
-	font-family: "Raleway", sans-serif;
-	font-size: 26px;
-	color: white;
-	padding: 1px;
-	text-align: center;
-}
-
 @keyframes fade_in {
 	from {
 		opacity: 0;
@@ -38,8 +18,31 @@ body {
 	}
 }
 
+body {
+	background-color: #111111;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: white;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	animation: fade_in ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.header {
+	font-family: "Raleway", sans-serif;
+	font-size: 26px;
+	color: white;
+	padding: 1px;
+	text-align: center;
+}
+
 .info {
-	animation: fade_in 2s ease-out, move_up 3s cubic-bezier(0.16, 1, 0.3, 1);
+	animation: move_up 3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .info_avatar img {
@@ -75,7 +78,7 @@ a:active {
 
 ul {
 	list-style-type: none;
-	margin: 0;
+	margin: 0 50px;
 	padding: 0;
 	overflow: hidden;
 	background-color: #131313;
@@ -102,7 +105,6 @@ li .active {
 }
 
 .works {
-	
 	display: inline-block;
 }
 

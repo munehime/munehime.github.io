@@ -30,7 +30,7 @@ a:active {
 
 ul {
 	list-style-type: none;
-	margin: 0;
+	margin: 0 50px;
 	padding: 0;
 	overflow: hidden;
 	background-color: #131313;
