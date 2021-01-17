@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto&display=swap");
+
+@keyframes zoom_in {
+	from {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.15);
+	}
+}
+
+@keyframes zoom_out {
+	50% {
+		transform: scale(1.15);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+body {
+	background-color: #111111;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: white;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+img {
+	display: block;
+	padding-top: 50px;
+	margin: 0 auto;
+	animation: zoom_in 6s cubic-bezier(0.61, 1, 0.88, 1) infinite,
+		zoom_out 6s cubic-bezier(0.12, 0, 0.39, 0)infinite;
+}
