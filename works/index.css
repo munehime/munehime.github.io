@@ -59,41 +59,69 @@ ul li .active {
 }
 
 .works {
-	float: left;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding: 50px;
+	margin: 0;
+	list-style: none;
+}
+.storyboard,
+.discord-bot {
 	position: relative;
-	width: 50%;
+	width: 47%;
+	margin-top: 10px;
 }
 
-.works img {
+@media screen and (max-width: 600px) {
+	.works {
+		flex-direction: column;
+	}
+
+	.storyboard,
+	.discord-bot {
+		width: 100%;
+	}
+}
+
+.image {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: 0.2s cubic-bezier(0.61, 1, 0.88, 1);
+	backface-visibility: hidden;
+}
+
+.image img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 100%;
-	height: auto;
-	width: 50%;
 }
 
-.blur {
+.middle {
+	transition: 0.2s cubic-bezier(0.61, 1, 0.88, 1);
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+.storyboard:hover .image,
+.discord-bot:hover .image {
+	opacity: 0.8;
 	filter: blur(4px);
 }
 
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	overflow: hidden;
-	opacity: 0;
-	transition: 0.5s ease;
-	transform: translate(-50%, -50%);
-	z-index: 1;
-}
-
-.overlay img {
-	max-width: 100%;
-	height: auto;
-	width: 100%;
-}
-
-.storyboard:hover .overlay {
+.storyboard:hover .middle,
+.discord-bot:hover .middle {
 	opacity: 1;
+}
+
+.text {
+	font-family: "Roboto", sans-serif;
+	color: white;
+	font-size: 36px;
 }
