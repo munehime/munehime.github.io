@@ -40,7 +40,6 @@ ul:not(#preview) {
 }
 
 ul#preview {
-	margin-top: 20px;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
@@ -59,6 +58,12 @@ li a {
 	text-decoration: none;
 	color: #ffffff80;
 }
+
+li a#screenshots {
+	margin-top: 35px;
+	padding: 0px;
+}
+
 li a:hover:not(.active) {
 	color: #ffffffd2;
 }
@@ -69,34 +74,4 @@ li .active {
 
 p {
 	font-size: 26px;
-}
-
-.middle {
-	transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	overflow: hidden;
-	width: 0;
-	opacity: 1;
-	height: 100%;
-	background-color: rgba(1, 1, 1, 0.8);
-}
-
-li a#screenshot:hover .middle {
-	width: 100%;
-}
-
-.text {
-	white-space: nowrap;
-	font-family: "Roboto", sans-serif;
-	color: white;
-	font-size: 36px;
-	overflow: hidden;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 }
